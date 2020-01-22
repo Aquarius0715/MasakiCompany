@@ -1,58 +1,29 @@
 import java.util.Scanner;
 
-
-
 public class Main {
 
-
-
     public static void main(String[] args) {
-
-
+        //////////インスタンスを呼び出す/////
+        DefineHuman d = new DefineHuman();
+        Employment e = new Employment();
+        GameSystem g = new GameSystem();
+        //////////////////////////////////
 
         //オープニング
 
-
-
-        System.out.println("鬼畜会社経営");
-
-        while (true) {
-
-            System.out.println("「スタート」と入力してください。");
-
-            String start = new Scanner(System.in).nextLine();
-
-            if (start.equals("スタート")) {
-
-                System.out.println("ゲームスタート！");
-
-                break;
-
-            } else System.out.println("打ちなおしてください。");
-
-        }
+        g.Opening();
 
         //自分のプロフィールを設定
 
-
-
-        DefineHuman d = new DefineHuman();
-
         d.DecideMyProfiel();
-
-
 
         //ここから社員を雇っていく
 
-
-
-        Employment e = new Employment();
-
         e.Employment();
 
-
-
+        //雇った社員の有能値を計算する
+        e.ScoreCalculation();
+        //TODO 雇った社員のうちの合計を計算する
     }
-
 }
 
