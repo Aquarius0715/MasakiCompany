@@ -6,7 +6,7 @@ public class GameSystem {
 
     public void GameSystem() {
 
-                System.out.println("DAY" + day++);
+        System.out.println("DAY" + day++);
 
     }
 
